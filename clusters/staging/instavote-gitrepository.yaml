@@ -2,10 +2,12 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
+  annotations:
+    reconcile.fluxcd.io/requestedAt: "2025-04-20T19:44:08.927565489Z"
   name: instavote
   namespace: flux-system
 spec:
-  interval: 1m
+  interval: 50s
   ref:
     branch: main
   timeout: 1m0s
