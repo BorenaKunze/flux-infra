@@ -1,0 +1,42 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  annotations:
+    reconcile.fluxcd.io/requestedAt: "2025-06-15T18:41:28.533596148Z"
+  creationTimestamp: "2025-06-15T17:02:29Z"
+  finalizers:
+  - finalizers.fluxcd.io
+  generation: 1
+  name: flux-monitoring
+  namespace: flux-system
+  resourceVersion: "1621073230"
+  uid: ac2a5c58-37ec-4ca8-ab38-eeebce4af826
+spec:
+  interval: 30m0s
+  ref:
+    branch: main
+  timeout: 60s
+  url: https://github.com/BorenaKunze/flux-infra.git
+status:
+  artifact:
+    digest: sha256:ebfcab292535264d2830158bf82e4352f9a6dc2d594c97bcbbbd3ddd0c7dee7a
+    lastUpdateTime: "2025-06-15T17:38:17Z"
+    path: gitrepository/flux-system/flux-monitoring/8ae0aaa46c43e29b6b1ba6c1e205fc13c0a6e4ad.tar.gz
+    revision: main@sha1:8ae0aaa46c43e29b6b1ba6c1e205fc13c0a6e4ad
+    size: 1352170
+    url: http://source-controller.flux-system.svc.cluster.local./gitrepository/flux-system/flux-monitoring/8ae0aaa46c43e29b6b1ba6c1e205fc13c0a6e4ad.tar.gz
+  conditions:
+  - lastTransitionTime: "2025-06-15T17:38:17Z"
+    message: stored artifact for revision 'main@sha1:8ae0aaa46c43e29b6b1ba6c1e205fc13c0a6e4ad'
+    observedGeneration: 1
+    reason: Succeeded
+    status: "True"
+    type: Ready
+  - lastTransitionTime: "2025-06-15T17:38:17Z"
+    message: stored artifact for revision 'main@sha1:8ae0aaa46c43e29b6b1ba6c1e205fc13c0a6e4ad'
+    observedGeneration: 1
+    reason: Succeeded
+    status: "True"
+    type: ArtifactInStorage
+  lastHandledReconcileAt: "2025-06-15T18:41:28.533596148Z"
+  observedGeneration: 1
