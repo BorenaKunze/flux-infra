@@ -1,0 +1,22 @@
+apiVersion: notification.toolkit.fluxcd.io/v1
+kind: Receiver
+metadata:
+  name: github-webhook
+  namespace: flux-system
+spec:
+  type: github
+  secretRef:
+    name: github-webhook-secret
+  resources:
+  - kind: GitRepository
+    name: flux-system
+  - kind: GitRepository
+    name: instavote
+  - kind: Kustomization
+    name: flux-system
+  - kind: Kustomization
+    name: redis-staging
+  - kind: Kustomization
+    name: vote-staging
+  - kind: Kustomization
+    name: worker-staging
